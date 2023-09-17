@@ -23,6 +23,13 @@
 - 가장 오래걸리는 상한을 표시한다.
 - ex) 4n + n log n + 10 -> O(n log n)
 
+## 재귀함수 vs 비재귀함수
+- 재귀함수의 대표적인 예 : 피보나치 수열, 팩토리얼 계산
+- 재귀함수와 비재귀함수 중 어느것이 더 빠르게 계산할까?
+  - 일반적으로 비재귀함수가 더 빠르다.
+- 재귀함수의 장점
+  - 코드가 깔끔해진다. 
+
 ## Code example
 ```python
 def On_simple_search(lst,number):  # O(n)
@@ -41,4 +48,10 @@ def On2_bubble_sort(lst):  # O(n^2)
             if lst[j] > lst[j+1]:
                 lst[j], lst[j+1] = lst[j+1], lst[j]
 return lst
+```
+```python
+i = n    # O(log n)
+While i > 0:
+    print(i)
+    i // 2      # i를 2로 계속 나누어 가기 때문에, 밑이 2인 로그이다.
 ```
